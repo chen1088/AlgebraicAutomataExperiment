@@ -1,0 +1,1 @@
+Syntactic monoid experiment.
