@@ -25,7 +25,7 @@ public class DFAModularSubstring extends BinaryDFA {
             m2.put(i,substring.charAt(0)!='0'?m:(i+1)%m);
          }
       }
-      var l = Math.min(substring.length(),m);
+      var l = Math.min(substring.length(),m-1);
       for(var i = 1;i<l;++i)
       {
          m1.put(m+i-1,substring.charAt(i)=='0'?(m+i):(j+i+1)%m);
@@ -44,7 +44,7 @@ public class DFAModularSubstring extends BinaryDFA {
 
    public static void main(String[] args)
    {
-      var d = new DFAModularSubstring("1011010",9,1);
+      var d = new DFAModularSubstring("1011000001001010",20,5);
       System.out.println(d);
       SyntacticMonoid sm = new SyntacticMonoid(d.GetTrans0(),d.GetTrans1());
       System.out.println(sm);

@@ -51,7 +51,12 @@ public class Permutation {
    {
       return (other instanceof Permutation) && perm.equals(((Permutation)other).perm);
    }
+   public static Permutation getRandom(int size)
+   {
+      Map<Integer,Integer> res = new HashMap<>();
 
+      return new Permutation(res);
+   }
    public int hashCode()
    {
       return perm.hashCode();
