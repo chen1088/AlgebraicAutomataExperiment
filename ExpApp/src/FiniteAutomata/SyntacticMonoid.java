@@ -6,6 +6,7 @@ import static java.util.Map.entry;
 
 public class SyntacticMonoid {
    Set<Permutation> closure;
+
    public SyntacticMonoid(Permutation trans0, Permutation trans1)
    {
       closure = new HashSet<>();
